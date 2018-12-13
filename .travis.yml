@@ -46,6 +46,5 @@ jobs:
         secure: cIidkFmvkdmdwWsqBpxyPUCzBqgK8LhPiNxTrIfhwbUunMsJep9MiiBJtv8poVYG2Y4yfiZmqGn4nfetUdc/LDctd73j+/EM4Z/NUDexVAhJ+9/qCogvpJsSQ96VQo7yBceW4E1fBM3WCU0kcGToYIVSSrwvvRDtJfeYJf2Qqw0=
       on:
         tags: true
+        tag: test
         repo: novnc/noVNC
-
-
