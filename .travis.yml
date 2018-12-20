@@ -41,14 +41,14 @@ jobs:
     addons:
     script: skip
     before_script: skip
-    before_deploy: "ls -l"
-    after_deploy: "ls -l"
+    before_deploy: "ls -l; cat .npmrc; cat ~/.npmrc; true"
+    after_deploy: "ls -l; cat .npmrc; cat ~/.npmrc; cat /home/travis/build/novnc/noVNC/npm-debug.log; true"
     deploy:
       provider: npm
       email: ossman@cendio.se
+      tag: test
       api_key:
         secure: "Qq2Mi9xQawO2zlAigzshzMu2QMHvu1IaN9l0ZIivE99wHJj7eS5f4miJ9wB+/mWRRgb3E8uj9ZRV24+Oc36drlBTU9sz+lHhH0uFMfAIseceK64wZV9sLAZm472fmPp2xdUeTCCqPaRy7g1XBqiJ0LyZvEFLsRijqcLjPBF+b8w="
       on:
         tags: true
-        tag: test
         repo: novnc/noVNC
